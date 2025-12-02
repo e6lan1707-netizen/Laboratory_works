@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Grunge Music Utils — интерактивная рок-лабушка</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Grunge Music Utils — интерактивная тест-площадка</h1>
+
+<div class="block">
+<h3>🎸 Выбери трек:</h3>
+<select id="trackSelect"></select>
+<button id="calcBtn">Посчитать гранж-индекс</button>
+<button id="loudestBtn">Найти самый громкий трек</button>
+<div id="trackResult" class="result"></div>
+<div class="bar-container"><div id="volumeBar" class="bar"></div></div>
+</div>
+
+<div class="block">
+<h3>➕ Добавить свой трек:</h3>
+<p>Название:</p><input id="title" placeholder="Dirty Basement Jam">
+<p>Громкость (dB):</p><input id="volume" type="number" placeholder="80">
+<p>Длительность (сек):</p><input id="duration" type="number" placeholder="200">
+<p>Искажения (0–10):</p><input id="distortion" type="number" placeholder="7">
+<p>Шум (0–10):</p><input id="noise" type="number" placeholder="3">
+<button id="addBtn">Добавить трек</button>
+<div id="addResult" class="result"></div>
+</div>
+
+<div class="block">
+<h3>⚡ Дёрнуть гранж-рандомайзер:</h3>
+<button id="randomBtn">Give me something nasty</button>
+<div id="randomResult" class="result"></div>
+</div>
+
+<div class="block">
+<h3>🧪 Тесты:</h3>
+<pre id="tests"></pre>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

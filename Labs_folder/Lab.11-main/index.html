@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>🖤 Mood Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🖤 Mood Tracker</h1>
+
+  <form id="moodForm">
+    <select id="moodSelect">
+      <option value="">-- выбери настроение --</option>
+      <option value="😎 спокойно">Спокойно</option>
+      <option value="😔 грустно">Грустно</option>
+      <option value="😡 злость">Злость</option>
+      <option value="🤘 вдохновленно">Вдохновленно</option>
+      <option value="💀 безразличие">Безразличие</option>
+    </select>
+    <input type="text" id="noteInput" placeholder="Комментарий (по желанию)">
+    <button type="submit">Добавить</button>
+  </form>
+
+  <ul id="moodList"></ul>
+
+  <script src="main.js"></script>
+</body>
+</html>

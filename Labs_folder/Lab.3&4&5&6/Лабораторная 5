@@ -1,0 +1,24 @@
+# Исходный список
+lst = [1, 5, 9, 2, 7]
+
+# Переворот списка
+reversed_lst = lst[::-1]
+
+print("Исходный список:", lst)
+print("Обратный список:", reversed_lst)
+def list_sort(lst):
+    return sorted(lst, key=abs, reverse=True)
+
+# Пример использования
+numbers = [3, -7, 2, -10, 5]
+print("Исходный список:", numbers)
+print("Отсортированный:", list_sort(numbers))
+def change(lst):
+    if len(lst) >= 2:
+        lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+
+# Пример использования
+nums = [10, 20, 30, 40]
+print("Исходный список:", nums)
+print("После замены:", change(nums))

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Antisocial Auth — Lab12</title>
+
+  <!-- Google Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Стили: убедись, что файл styles.css лежит рядом с index.html -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- фавикон/логотип (опционально) -->
+  <meta name="theme-color" content="#0f0210">
+</head>
+<body>
+  <!-- тёмный фильтр над фоном -->
+  <div class="overlay"></div>
+
+  <!-- основное приложение -->
+  <div id="app" class="container">
+    <!-- Контент рендерится скриптом, но можно оставить заглушку -->
+    <noscript>
+      <p style="color:#f88; text-align:center;">Нужен JavaScript для работы приложения.</p>
+    </noscript>
+  </div>
+
+  <!-- Логика приложения -->
+  <script defer src="app.js"></script>
+</body>
+</html>

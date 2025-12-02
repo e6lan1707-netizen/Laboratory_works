@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+:root{
+  --accent1: #b58aff;
+  --bg-overlay: rgba(0,0,0,0.66);
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background: url('assets/bg.jpg') center/cover no-repeat fixed;
+  color:#eee;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:var(--bg-overlay);
+  backdrop-filter: blur(6px);
+  z-index:1;
+}
+
+/* контейнер */
+.container{
+  position:relative;
+  z-index:2;
+  width:380px;
+  padding:36px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(10,10,12,0.65), rgba(8,8,10,0.55));
+  border: 1px solid rgba(130,40,200,0.18);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(120,25,200,0.12);
+  margin:auto;
+}
+
+/* заголовок */
+h2{
+  margin:0 0 18px 0;
+  text-align:center;
+  color:var(--accent1);
+  letter-spacing:1.6px;
+  font-weight:600;
+}
+
+/* поля */
+input[type="email"], input[type="password"]{
+  width:100%;
+  padding:12px 14px;
+  margin:10px 0;
+  background:rgba(18,18,18,0.9);
+  border:1px solid rgba(90,20,140,0.25);
+  border-radius:8px;
+  color:#eee;
+  font-size:14px;
+  outline:none;
+  transition:box-shadow .18s, border-color .18s, transform .12s;
+}
+input:focus{
+  border-color: #d9b9ff;
+  box-shadow: 0 0 12px rgba(180,120,255,0.12);
+}
+
+/* кнопка */
+button{
+  width:100%;
+  padding:12px;
+  margin-top:14px;
+  background: linear-gradient(135deg,#7b1aff,#b06bff);
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .12s, box-shadow .12s;
+}
+button:hover{ transform: translateY(-2px); box-shadow:0 6px 20px rgba(160,90,255,0.18); }
+
+/* textarea токена */
+textarea{
+  width:100%;
+  margin-top:12px;
+  padding:10px;
+  border-radius:8px;
+  background:#0f0f10;
+  border:1px solid rgba(90,20,140,0.2);
+  color:#dcdcdc;
+}
+
+/* адаптив */
+@media (max-width:420px){
+  .container{ width:92%; padding:22px; }
+}

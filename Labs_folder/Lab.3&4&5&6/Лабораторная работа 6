@@ -1,0 +1,55 @@
+import random
+
+# Задача 1 
+print("Задача 1. Максимум четных элементов в массиве")
+
+# Создаем массив из 10 действительных чисел 
+arr = [12, 7, -4, 9, 0, 18, 21, -8, 6, 3]
+
+print("Массив:", arr)
+
+# Выбираем четные числа
+even_numbers = [x for x in arr if x % 2 == 0]
+
+# Находим максимум среди четных
+if even_numbers:
+    max_even = max(even_numbers)
+    print("Максимальное четное число:", max_even)
+else:
+    print("Четных чисел в массиве нет")
+
+print("\n---------------------------------\n")
+
+# Задача 2 
+print("Задача 2. Определить, больше ли положительных или отрицательных чисел")
+
+# Создаем двумерный массив A(5x10) со случайными числами от -10 до 10
+rows, cols = 5, 10
+A = [[random.randint(-10, 10) for j in range(cols)] for i in range(rows)]
+
+# Считаем положительные и отрицательные числа
+positive_count = 0
+negative_count = 0
+
+for i in range(rows):
+    for j in range(cols):
+        if A[i][j] > 0:
+            positive_count += 1
+        elif A[i][j] < 0:
+            negative_count += 1
+
+# Выводим массив
+print("Массив A(5x10):")
+for row in A:
+    print(row)
+
+# Выводим результаты
+print("\nКоличество положительных:", positive_count)
+print("Количество отрицательных:", negative_count)
+
+if positive_count > negative_count:
+    print("Положительных больше")
+elif negative_count > positive_count:
+    print("Отрицательных больше")
+else:
+    print("Поровну")
